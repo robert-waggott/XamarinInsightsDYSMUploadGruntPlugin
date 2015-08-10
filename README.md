@@ -2,6 +2,8 @@
 
 > Quick way to zip and upload your iOS DYSM to Xamarin Insights
 
+Inspired by a [blog post](http://thetechnologystudio.co.uk/blog/) and [gist](https://gist.github.com/robert-waggott/528238a7fb2893db97fd).
+
 ## Getting Started
 This plugin requires Grunt `~0.4.5`
 
