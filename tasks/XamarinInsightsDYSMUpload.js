@@ -6,45 +6,25 @@
  * Licensed under the MIT license.
  */
 
-'use strict';
+"use strict";
 
 module.exports = function(grunt) {
+    // Please see the Grunt documentation for more information regarding task
+    // creation: http://gruntjs.com/creating-tasks
+    grunt.registerMultiTask("XamarinInsightsDYSMUpload", "Quick way to zip and upload your iOS DYSM to Xamarin Insights", function() {
+        var data = this.data;
+        var directory = data.directory;
+        var apiKey = data.apiKey;
 
-  // Please see the Grunt documentation for more information regarding task
-  // creation: http://gruntjs.com/creating-tasks
+        grunt.log.writeln(directory);
+        grunt.log.writeln(apiKey);
 
-  grunt.registerMultiTask('XamarinInsightsDYSMUpload', 'Quick way to zip and upload your iOS DYSM to Xamarin Insights', function() {
-    // Merge task-specific and/or target-specific options with these defaults.
-    var options = this.options({
-      punctuation: '.',
-      separator: ', '
-    });
-
-    // Iterate over all specified file groups.
-    this.files.forEach(function(f) {
-      // Concat specified files.
-      var src = f.src.filter(function(filepath) {
-        // Warn on and remove invalid source files (if nonull was set).
-        if (!grunt.file.exists(filepath)) {
-          grunt.log.warn('Source file "' + filepath + '" not found.');
-          return false;
-        } else {
-          return true;
+        if (!directory) {
+            grunt.fail.fatal("directory not specified");
         }
-      }).map(function(filepath) {
-        // Read file source.
-        return grunt.file.read(filepath);
-      }).join(grunt.util.normalizelf(options.separator));
 
-      // Handle options.
-      src += options.punctuation;
-
-      // Write the destination file.
-      grunt.file.write(f.dest, src);
-
-      // Print a success message.
-      grunt.log.writeln('File "' + f.dest + '" created.');
+        if (!apiKey) {
+            grunt.fail.fatal("apiKey not specified");    
+        }
     });
-  });
-
 };
