@@ -50,7 +50,7 @@ The path to the directory where your generated DYSM is located.
 ```js
 grunt.initConfig({
   XamarinInsightsDYSMUpload: {
-    directory: "",
+    directory: "/foo/bar/",
     apiKey: "abc"
   }
 });
