@@ -32,22 +32,22 @@ module.exports = function(grunt) {
             dysm
         ].join(' ');
 
+        exec(zipCommand, function(error, stdout, stderr) {
+            if (error !== null) {
+                grunt.fail.fatal(error);
+            }
+        });
+
         var curlCommand = [
             'curl',
             '-F "dsym=@' + dysm + '.zip;type=application/zip"',
             'https://xaapi.xamarin.com/api/dsym?apikey=' + apiKey,
-        ].join(' ');
+        ].join(' ');        
 
-        exec(zipCommand, function(error, stdout, stderr) {
-            exec(curlCommand, function(error, stdout, stderr) {
-                if (error !== null) {
-                    grunt.fail.fatal(error);
-                }
-            });            
-
+        exec(curlCommand, function(error, stdout, stderr) {
             if (error !== null) {
                 grunt.fail.fatal(error);
             }
-        });      
+        });         
     });
 };

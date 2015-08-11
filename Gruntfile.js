@@ -12,7 +12,7 @@ module.exports = function(grunt) {
     grunt.initConfig({
         XamarinInsightsDYSMUpload: {
             debug: {
-                directory: "",
+                dysm: "/foo/bar/ed.dYSM",
                 apiKey: "abc"
             }
         }
