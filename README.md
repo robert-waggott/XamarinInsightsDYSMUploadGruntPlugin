@@ -27,7 +27,7 @@ In your project's Gruntfile, add a section named `XamarinInsightsDYSMUpload` to 
 ```js
 grunt.initConfig({
   XamarinInsightsDYSMUpload: {
-    directory: "",
+    dysm: "",
     apiKey: "abc"
   }
 });
@@ -41,18 +41,18 @@ Default value: `''`
 
 Your Xamarin Insights API key. 
 
-#### directory
+#### dysm
 Type: `String`
 Default value: `''`
 
-The path to the directory where your generated DYSM is located. 
+The path to your dysm. 
 
 ### Usage Examples
 
 ```js
 grunt.initConfig({
   XamarinInsightsDYSMUpload: {
-    directory: "/foo/bar/",
+    dysm: "/foo/bar/abc.dYSM",
     apiKey: "abc"
   }
 });
