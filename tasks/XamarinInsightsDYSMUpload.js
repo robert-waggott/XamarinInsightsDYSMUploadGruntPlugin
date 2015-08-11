@@ -27,6 +27,7 @@ module.exports = function(grunt) {
         var zipCommand = [
             'zip', 
             '-r', 
+            '-j',
             dysm + '.zip', 
             dysm
         ].join(' ');
