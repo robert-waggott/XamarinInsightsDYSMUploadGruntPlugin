@@ -1,7 +1,7 @@
 {
     "name": "grunt-xamarininsightsdysmupload",
     "description": "Quick way to zip and upload your iOS DYSM to Xamarin Insights",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "homepage": "https://github.com/robert-waggott/XamarinInsightsDYSMUploadGruntPlugin",
     "author": {
         "name": "robert.waggott",
@@ -34,6 +34,11 @@
         "grunt": "~0.4.5"
     },
     "keywords": [
-        "gruntplugin"
+        "gruntplugin",
+        "xamarin",
+        "insights",
+        "dysm",
+        "ios",
+        "mobile"
     ]
 }
