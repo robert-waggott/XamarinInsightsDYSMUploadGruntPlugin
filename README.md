@@ -36,14 +36,14 @@ grunt.initConfig({
 ### Options
 
 #### apiKey
-Type: `String`
-Default value: `''`
+* Type: `String`
+* Default value: `''`
 
 Your Xamarin Insights API key. 
 
 #### dysm
-Type: `String`
-Default value: `''`
+* Type: `String`
+* Default value: `''`
 
 The path to your dysm. 
 
