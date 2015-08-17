@@ -22,11 +22,11 @@ grunt.loadNpmTasks('grunt-xamarininsightsdysmupload');
 ## The "XamarinInsightsDYSMUpload" task
 
 ### Overview
-In your project's Gruntfile, add a section named `xamarininsightsdysmupload` to the data object passed into `grunt.initConfig()`.
+In your project's Gruntfile, add a section named `XamarinInsightsDYSMUpload` to the data object passed into `grunt.initConfig()`.
 
 ```js
 grunt.initConfig({
-  xamarininsightsdysmupload: {
+  XamarinInsightsDYSMUpload: {
     dysm: "",
     apiKey: "abc"
   }
@@ -51,7 +51,7 @@ The path to your dysm.
 
 ```js
 grunt.initConfig({
-  xamarininsightsdysmupload: {
+  XamarinInsightsDYSMUpload: {
     dysm: "/foo/bar/abc.dYSM",
     apiKey: "abc"
   }
