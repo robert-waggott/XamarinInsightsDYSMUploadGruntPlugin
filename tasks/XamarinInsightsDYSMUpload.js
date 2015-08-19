@@ -9,6 +9,7 @@
 "use strict";
 
 module.exports = function(grunt) {
+    var execSync = require("exec-sync");
     var exec = require("child_process").exec;
 
     grunt.registerMultiTask("XamarinInsightsDYSMUpload", "Quick way to zip and upload your iOS DYSM to Xamarin Insights", function() {
@@ -32,11 +33,7 @@ module.exports = function(grunt) {
             dysm
         ].join(' ');
 
-        exec(zipCommand, function(error, stdout, stderr) {
-            if (error !== null) {
-                grunt.fail.fatal(error);
-            }
-        });
+        grunt.log.writeln(execSync(zipCommand));
 
         var curlCommand = [
             'curl',
@@ -44,10 +41,8 @@ module.exports = function(grunt) {
             'https://xaapi.xamarin.com/api/dsym?apikey=' + apiKey,
         ].join(' ');        
 
-        exec(curlCommand, function(error, stdout, stderr) {
-            if (error !== null) {
-                grunt.fail.fatal(error);
-            }
-        });         
+        exec(curlCommand);
+
+        grunt.log.writeln(curlCommand + " started")   
     });
 };

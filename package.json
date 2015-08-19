@@ -1,44 +1,47 @@
 {
-    "name": "grunt-xamarininsightsdysmupload",
-    "description": "Quick way to zip and upload your iOS DYSM to Xamarin Insights",
-    "version": "0.1.3",
-    "homepage": "https://github.com/robert-waggott/XamarinInsightsDYSMUploadGruntPlugin",
-    "author": {
-        "name": "robert.waggott",
-        "email": "robert.waggott@gmail.com",
-        "url": "https://github.com/robert-waggott"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/robert-waggott/XamarinInsightsDYSMUploadGruntPlugin.git"
-    },
-    "bugs": {
-        "url": "https://github.com/robert-waggott/XamarinInsightsDYSMUploadGruntPlugin/issues"
-    },
-    "licenses": [
-        {
-            "type": "MIT",
-            "url": "https://github.com/robert-waggott/XamarinInsightsDYSMUploadGruntPlugin/blob/master/LICENSE-MIT"
-        }
-    ],
-    "engines": {
-        "node": ">= 0.8.0"
-    },
-    "scripts": {
-        "test": "grunt test"
-    },
-    "devDependencies": {
-        "grunt": "~0.4.5"
-    },
-    "peerDependencies": {
-        "grunt": "~0.4.5"
-    },
-    "keywords": [
-        "gruntplugin",
-        "xamarin",
-        "insights",
-        "dysm",
-        "ios",
-        "mobile"
-    ]
+  "name": "grunt-xamarininsightsdysmupload",
+  "description": "Quick way to zip and upload your iOS DYSM to Xamarin Insights",
+  "version": "0.1.3",
+  "homepage": "https://github.com/robert-waggott/XamarinInsightsDYSMUploadGruntPlugin",
+  "author": {
+    "name": "robert.waggott",
+    "email": "robert.waggott@gmail.com",
+    "url": "https://github.com/robert-waggott"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/robert-waggott/XamarinInsightsDYSMUploadGruntPlugin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/robert-waggott/XamarinInsightsDYSMUploadGruntPlugin/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/robert-waggott/XamarinInsightsDYSMUploadGruntPlugin/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.5"
+  },
+  "keywords": [
+    "gruntplugin",
+    "xamarin",
+    "insights",
+    "dysm",
+    "ios",
+    "mobile"
+  ],
+  "dependencies": {
+    "exec-sync": "^0.1.6"
+  }
 }
